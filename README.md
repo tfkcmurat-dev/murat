@@ -11,3 +11,7 @@ Yerel PHP 8.3 ve örnek SQLite veritabanıyla 29 hizmet bağlantısı (28 yeni i
 ## Üst menü ve hizmet temizliği
 
 `menu-hizmet-duzenleme.zip` beş dosyalık ek güncellemedir. Üst marka/menü düzenini yeniler, banner üzerindeki dört etiketi bağlantı olmaktan çıkarır ve katalog dışındaki eski hizmetleri sayfalardan, ilgili hizmetlerden ve site haritasından kaldırır. Eski veritabanı kayıtları silinmez; katalogla aynı slug'a sahip aktif kayıtlar önceliğini korur. Yerel kontrollerde 28 katalog bağlantısı, eski kayıtların gizlenmesi ve banner etiketlerinin bağlantı içermemesi doğrulandı. Güncel ana sayfa görüntüsü `menu-onizleme.png` dosyasındadır. ZIP dosyalarının web dosyası izinleri 644, klasör izinleri 755 olarak hazırlanmıştır.
+
+## Logo güncellemesi
+
+`logo-guncelleme.zip` üst bölümdeki simgeyi mavi dişli, lacivert ekran ve şimşek içeren şeffaf logoyla değiştirir. Bilişim Servis yazısı okunur metin olarak korunur. Üç dosya içerir: üst bölüm şablonu, stil dosyası ve logo görseli. `logo-onizleme.png` uygulanmış masaüstü görünümüdür. Görselin yüklenmesi, mobil genişlik ve PHP şablonunun sözdizimi kontrol edildi.
