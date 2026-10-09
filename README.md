@@ -15,3 +15,9 @@ Yerel PHP 8.3 ve örnek SQLite veritabanıyla 29 hizmet bağlantısı (28 yeni i
 ## Logo güncellemesi
 
 `logo-guncelleme.zip` üst bölümdeki simgeyi mavi dişli, lacivert ekran ve şimşek içeren şeffaf logoyla değiştirir. Bilişim Servis yazısı okunur metin olarak korunur. Üç dosya içerir: üst bölüm şablonu, stil dosyası ve logo görseli. `logo-onizleme.png` uygulanmış masaüstü görünümüdür. Görselin yüklenmesi, mobil genişlik ve PHP şablonunun sözdizimi kontrol edildi.
+
+## Hakkımızda ve WhatsApp
+
+`site-son-guncelleme.zip` tüm güncel düzenlemeleri tek pakette toplar: yeni logo/üst menü, eski hizmetlerin gizlenmesi, banner etiketlerinin bağlantılarının kaldırılması, yeni Hakkımızda sayfası ve tüm ortak alt bölümleri kullanan sayfalarda WhatsApp bağlantısı. Admin'deki Hakkımızda metni korunur. WhatsApp bağlantısı mevcut geçerli iletişim telefonuna gider; eksik/geçersiz telefon ayarı varsa sitede yayımlanmış 0554 863 48 70 numarası kullanılır. Bağlantı hazır mesajla WhatsApp'ı açar; ziyaretçi Gönder düğmesine basmalıdır. Otomatik mesaj gönderimi veya üçüncü taraf WhatsApp API'si yoktur. Hakkımızda, ana sayfa, hizmet listesi ve hizmet detayı için hedef numara ve hazır mesaj yerel ortamda kontrol edildi; mesaj gönderilmedi.
+
+`eski-tasarima-don.zip` ilk gönderilen kaynaklardaki değişmiş dosyaları geri getirir. Tam hosting yedeğinin yerine geçmez. Eklenen görsel ve yardımcı dosyalar eski kod tarafından çağrılmaz. Son paketi yükledikten sonra ana sayfa, Hakkımızda, hizmetler ve WhatsApp düğmesini canlı ortamda kontrol edin; yükleme ZIP'ini web klasöründen kaldırın.
