@@ -1,0 +1,5 @@
+Bu paket yalnızca Google arama başlıklarını ve açıklamalarını günceller. Görünen içerikleri değiştirmez.
+DirectAdmin: domains/bilisimservis.com/public_html içine ZIP yükleyin, Extract seçin, Merge and overwrite ile açın.
+52 hizmet için İstanbul hedefli ayrı başlık ve açıklama hazırlanmıştır. Mevcut panelde özel sayfa SEO ayarı varsa o ayar önceliklidir.
+Kontrol: 52 arama başlığı/açıklaması doğrulandı; 56 sayfanın body HTML içeriği aynı kaldı.
+Google indeksleme veya sıralama ölçülmedi; üst sıra garantisi verilmez.
