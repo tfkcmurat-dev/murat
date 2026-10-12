@@ -45,3 +45,13 @@ Yeni fotoğraflar temsili cihaz grubu görselleridir. Hizmet sayısı 49, site h
 `bilisimservis-tum-proje.zip` yaklaşık 28 MB'lık tam kaynak dağıtımıdır; içinde `bilisimservis/` klasörü bulunur. Güncel ön yüz, yönetim paneli, sağlanan görseller, stiller, JavaScript ve Composer kilit dosyasındaki altı bağımlılık dahil edilmiştir. Bağımlılık sürümleri/manifest/lock değiştirilmemiştir. PHP 8.3 ile örnek PDF ve yerel MIME içeriği oluşturulmuştur; e-posta gönderilmemiştir.
 
 Üretim `app/config/config.php` ve veritabanı dökümü dahil değildir. `config.example.php` yalnızca yer tutucular içerir; gerçek bağlantı bilgileri arşive konmamıştır. Gerçek veritabanını önceki tam hosting yedeğinizden alın. Kaynakta yeni veritabanı oluşturma şeması bulunmadığından sıfırdan veri kurulumu doğrulanmış değildir. ZIP güncelleme paketi veya tam hosting yedeği yerine geçmez; içindeki `KURULUM.txt` kapsamı ve yeni kurulum adımlarını açıklar. Canlı site yapılandırmasını silmeyin veya örnek yapılandırmayla değiştirmeyin.
+
+## Panelden içerik düzenleme
+
+`panel-guncelleme.zip` mevcut paneli güncel içeriklere bağlar. Paketi uyguladıktan sonra `/admin/login.php` adresinden giriş yapın; İçerik Yönetimi → Hizmetler bölümünde **Yeni Hizmetleri Panele Ekle** düğmesine bir kez basın. Eksik katalog hizmetleri mevcut `site_services` tablosuna eklenir. İşlem transaction içinde yapılır; mevcut/pasif kayıtlar değiştirilmez ve tekrar çalıştırmak kopya kayıt oluşturmaz. Yeni tablo veya şema değişikliği gerektirmez.
+
+Hizmet düzenleme formunda başlık, alt başlık, açıklama, fotoğraf yükleme/adresi, özellikler, SSS, ana/alt kategori ve aktiflik yönetilebilir. Kategoriler mevcut theme_settings içinde metadata olarak kaydedilir. Yeni oluşturulan hizmetler seçilen kategoride yayımlanır. Katalog hizmetlerinin URL'leri korunur. Site, kayıtlı hizmet içeriğini dosya varsayılanlarından önce kullanır; ana sayfa kartlarında da kayıtlı başlık/fotoğraf gösterilir.
+
+Ana sayfa başlıkları ve tanıtım metni **Anasayfa Yönetimi**, logo yüklemesi **Tema Ayarları**, mevcut Hakkımızda yazısı **Hakkımızda** bölümünden düzenlenir. Yükleme PNG/JPG/WEBP ile sınırlı ve en fazla 5 MB'dır; PHP'nin public/assets/images/services altında dosya oluşturabilmesi gerekir. Rastgele dosya adı kullanılır ve webden okunabilir 644 izni verilir.
+
+Yerel SQLite örneğinde aktarımın tekrarlanabilirliği, mevcut/pasif kayıtların korunması, oturum/güvenlik kodu kontrolleri ve gerçek controller üzerinden kaydedilen içerik/kategori/SSS doğrulandı. Panelde aktarım, kategori, fotoğraf, ana sayfa ve logo alanlarının render edilmesi tarayıcıda kontrol edildi. Canlı veritabanında aktarım veya değişiklik yapılmadı. Güncel tam kaynak ZIP'i de bu panel değişikliklerini içerir.
