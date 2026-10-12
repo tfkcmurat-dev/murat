@@ -33,3 +33,9 @@ Google Search Console henüz bağlanmamıştır. Yüklemeden sonra https://searc
 ## Hizmet kategorileri
 
 `kategorili-site-guncelleme.zip` son düzenlemelerin tamamını ve kategori düzenini içerir. Hizmetler sayfasındaki 28 hizmet altı açılır kategoriye ayrılmıştır: Bilgisayar & Mac, Elektrik & Elektronik, TV–Uydu–Kamera, Küçük Ev Aletleri, Hizmet Verdiğimiz Alanlar ve Satış–Bakım–Destek. Ana sayfadaki uzun hizmet listesi altı kategori kartıyla değiştirilmiştir. Kartlar ilgili kategoriyi açar; hizmet detay adresleri korunur. Altı kategori, 28 benzersiz hizmet, açılma/kapanma, kategori bağlantıları ve mobil genişlik yerel tarayıcıda kontrol edildi.
+
+## Genişletilmiş küçük ev aletleri
+
+`ev-aletleri-guncelleme.zip` son site düzenlemeleriyle birlikte dört küçük ev aleti alt grubunu içerir: Kişisel Bakım (5 cihaz), Mutfak Aletleri (13 cihaz), Temizlik Cihazları (4 cihaz), Ütü & Ev Konforu (5 cihaz). Toplam 27 cihaz için ayrı detay içerikleri vardır. Yeni başlıklar arasında fön/saç kurutma makinesi, saç maşası, saç düzleştirici, tıraş makinesi, epilatör, çay makinesi, airfryer, fritöz, mutfak robotu, rondo, ekmek kızartma makinesi, meyve sıkacağı, ekmek yapma makinesi, robot/dikey süpürge, buharlı temizleyici, ütü/kazanlı ütü, vantilatör, elektrikli ısıtıcı ve hava nemlendirici bulunur. Marka/model ve parça durumuna göre değerlendirme açıklanır; her cihaz için koşulsuz onarım sözü verilmez.
+
+Yeni fotoğraflar temsili cihaz grubu görselleridir. Hizmet sayısı 49, site haritası URL sayısı 53 olmuştur. Dört alt grup, 27 benzersiz cihaz, fön/saç maşası bağlantıları, yeni detay sayfaları, WhatsApp ve mobil görünüm kontrol edilmiştir. SEO kontrolü 53 sayfada çalıştırılmıştır. Yükleme hedefi public_html; ZIP'in dosya izinleri 644 ve klasör izinleri 755'tir.
