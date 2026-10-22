@@ -1,0 +1,49 @@
+OTOMATİK WHATSAPP BAĞLANTISI — HENÜZ ETKİN DEĞİL
+
+Mevcut WhatsApp/WhatsApp Business telefon uygulaması tek başına yeterli değildir.
+Meta WhatsApp Business Platform (Cloud API), bağlı gönderici telefon numarası,
+geçerli erişim anahtarı ve onaylı yardımcı hizmet (utility) mesaj şablonu gerekir.
+Meta'nın kullanım/ücretlendirme ve numara bağlama koşulları ayrıca uygulanır.
+
+Bu sürümde PHP ortam değişkenleriyle etkinleşen bir gönderim adaptörü vardır:
+BS_WA_ACCESS_TOKEN  : mesaj gönderme yetkili erişim anahtarı
+BS_WA_PHONE_ID      : gönderen telefonun Meta kimliği (telefon numarası değil)
+BS_WA_TEMPLATE      : Meta tarafından onaylı utility şablonunun adı
+BS_WA_GRAPH_VERSION : Meta'nın desteklediği Graph sürümü (vXX.X biçiminde)
+BS_WA_LANGUAGE     : onaylı şablon dili; varsayılan tr
+
+Değerler hosting yöneticisi tarafından PHP-FPM ortamına güvenli olarak bağlanır.
+Sohbete, Git'e, public_html içindeki dosyaya veya herkese açık .env dosyasına
+anahtar yazmayın. Bu pakette anahtar, gerçek müşteri verisi veya config.php yoktur.
+PHP curl ve HTTPS dış bağlantı izni gerekir. TLS doğrulaması kapatılmaz.
+
+Şablon sözleşmesi: header/button yok, body içinde tek metin parametresi {{1}}.
+Örnek metin (Meta onayına tabidir):
+Bilişim Servis teknik servis kaydınızın güncel bilgileri: {{1}}
+Sorularınız için servisimizle iletişime geçebilirsiniz.
+
+{{1}} içine müşterinin adı, kayıt numarası, cihaz, durum ve varsa ücret girer.
+Şablon dilinin, parametre yapısının ve adının Meta kaydıyla eşleşmesi gerekir.
+Bu sözleşme üretimde onaylanmış veya gerçek numarayla doğrulanmış değildir.
+
+İzinli müşteride kayıt/durum değişikliğinden SONRA tek gönderim denemesi yapılır.
+Kayıt işlemi önce veritabanına tamamlanır. Aynı olay atomik olarak işaretlenir;
+aynı durumu kaydetmek tekrar otomatik mesaj göndermez.
+API bağlantısı yokken oluşan eski mesajlar sonradan topluca gönderilmez.
+Kayıt esnasındaki alıcı numarası ve mesaj metni geçmişte sabit tutulur.
+Geçmişteki bir mesajı elle göndermeden önce tarihini ve alıcıyı kontrol edin.
+
+Kayıt durumları:
+- pending: hazır, otomatik gönderim yapılmadı
+- no_consent: müşterinin mesaj izni yok
+- sending: gönderim başlatılmış, tamamlanma sonucu yok
+- accepted: sağlayıcı mesaj kimliği verdi; TESLİM EDİLDİ DEMEK DEĞİL
+- failed: sağlayıcı isteği kabul etmedi
+- unknown: ağ/zaman aşımı/işlem hatası; gönderim gerçekleşmiş olabilir
+
+Teslim/okundu webhooks entegrasyonu bu sürümde yoktur; panel teslim iddiasında
+bulunmaz. Belirsiz ya da başarısız işlemler otomatik tekrar denenmez.
+Çift mesajı önlemek için gönderici sohbetini kontrol etmeden elle tekrar göndermeyin.
+Gönderici numarasıyla müşteri mesajları arasında gerçek gönderim testi, Meta
+bağlantısı tamamlandıktan sonra yapılmalıdır. Şu ana kadar testler örnek taşıyıcı
+ile yürütüldü; gerçek müşteriye veya gerçek WhatsApp hesabına mesaj gönderilmedi.

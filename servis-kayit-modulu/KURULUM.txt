@@ -1,0 +1,48 @@
+MÜŞTERİ VE SERVİS KAYITLARI
+
+1. Güncel hosting yedeğinizi alın ve saklayın.
+2. musteri-servis-kayit-guncelleme.zip dosyasını DirectAdmin'de
+   domains/bilisimservis.com/public_html içine yükleyin.
+3. Extract > Merge and overwrite > EXTRACT seçin. Mevcut dosyaları silmeyin.
+4. Mevcut admin hesabınızla /admin/login.php üzerinden giriş yapın.
+5. Soldaki Müşteri / Servis Kayıtları menüsünü açın.
+6. İlk kullanımda Kayıt alanını etkinleştir düğmesine bir kez basın.
+7. Yeni müşteri / cihaz kaydı ile başlayın.
+
+Doğrudan adres: https://www.bilisimservis.com/admin/repairs.php
+
+Müşteri adı, telefon, adres, e-posta; cihaz/marka/model, seri numarası,
+arıza, teslim alınan aksesuarlar, iç servis notu, ücret ve fotoğraflar kaydedilir.
+Her cihazın ayrı servis numarası ve durum geçmişi vardır.
+Durumlar: Kayıt açıldı, Arıza tespitinde, Onarıma alındı,
+Ücretli onarım için ödeme bekleniyor, Onarıldı, Teslim edildi, İptal edildi.
+Ödeme bekleniyor seçeneğinde ücret girilmesi zorunludur. Ücret bilgisi
+ödemenin yapıldığını doğrulamaz; bu modül ödeme tahsilatı yapmaz.
+
+WHATSAPP
+Mevcut kurulumda otomatik WhatsApp gönderimi aktif DEĞİLDİR.
+Müşteri mesaj izni verdiyse onay kutusunu işaretleyin.
+Kayıt açılması ve her durum değişikliğinde ayrı bir hazır mesaj oluşur.
+WhatsApp'ta mesajı aç düğmesi sohbeti ve metni açar; WhatsApp'ta
+Gönder'e basmanız gerekir. Sohbeti açmak mesajı gönderilmiş olarak işaretlemez.
+Aynı durumla tekrar kaydetmek yeni mesaj kaydı oluşturmaz.
+İç servis notu, arıza metni ve fotoğraflar müşteriye otomatik gönderilmez.
+
+FOTOĞRAFLAR VE YEDEK
+JPG/PNG/WebP; fotoğraf başına 5 MB, işlem başına 20 MB; kayıtta en fazla 10.
+Hosting'in yükleme sınırı daha düşük olabilir; küçük dosyalarla deneyin.
+Fotoğraflar public_html dışında, domain dizinindeki bilisimservis-repair-files
+klasörüne kaydedilir. Fotoğrafları yalnızca giriş yapmış yöneticiler görebilir.
+Bu klasör ile bs_repairs, bs_repair_events, bs_repair_photos tablolarını
+rutin yedeklerinize dahil edin. Önceki yedek yeni kayıtları içermez.
+Mevcut müşteri, teklif ve hizmet tabloları değiştirilmez. Servis kayıtları
+mevcut Müşteriler/teklif listesinden ayrı tutulur; bir cihaza bir kayıt açılır.
+
+GERİ DÖNÜŞ
+Güncellemeden önceki admin/views/layouts/sidebar.php dosyanızı geri yükleyin.
+Yeni menü kaldırılır. Kayıtları ve fotoğrafları korumak için yeni tabloları
+ve bilisimservis-repair-files klasörünü silmeyin. Eski müşteri ve teklifler
+bu modülden bağımsızdır.
+
+Otomatik WhatsApp bağlantısı için teknik ayrıntılar WHATSAPP-BAGLANTISI.txt
+belgesindedir. Erişim anahtarlarını sohbetten göndermeyin.

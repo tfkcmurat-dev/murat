@@ -65,3 +65,25 @@ Sayfalarda gerçek hizmet kapsamı, inceleme/ücret süreci, iletişim ve ilgili
 Yerel kontrolde dört hedefin başlığı, İstanbul ve marka adı, açıklama, Service verisi ve WhatsApp bağlantısı doğrulandı. Site toplam 52 hizmet ve 56 site haritası URL'si içerir. Bu kontroller sıralama, arama hacmi veya Google tarafından dizine alınma kanıtı değildir. Yükleme sonrasında Search Console mülk doğrulaması/site haritası gönderimi ve gerçek Google İşletme Profili bilgileri ayrıca tamamlanmalıdır. Reklam kampanyası veya reklam harcaması yapılmamıştır.
 
 Google İşletme Profili henüz oluşturulmamıştır. Sahibi Google hesabından https://www.google.com/business/ üzerinden gerçek işletme adıyla kayıt oluşturmalı; gerçek çalışma modeli (müşteri kabul eden iş yeri/hizmet bölgesi), kategori, telefon ve çalışma saatleri bilgilerini tamamlamalıdır. Gerçek işletme adına arama kelimeleri ekleyerek isim değiştirilmemelidir. Profilin sunacağı doğrulama adımı hesap sahibine aittir; Google hesap şifresi paylaşılmamalıdır. Sahte adres, yorum veya doğrulama iddiası kullanılmaz. Bu proje işi Google hesabına erişim veya profil doğrulaması sağlamaz.
+
+## Müşteri ve servis kayıtları
+
+`musteri-servis-kayit-guncelleme.zip`, mevcut panele müşteri/cihaz kaydı,
+özel fotoğraflar, arıza açıklaması, ücret ve durum geçmişi ekler. Kaynakları
+`servis-kayit-modulu/` dizinindedir. ZIP'i `public_html` içine açtıktan sonra
+admin panelinde **Müşteri / Servis Kayıtları > Kayıt alanını etkinleştir** ile
+ilk kurulumu yapın. Mevcut müşteri ve teklif tabloları değiştirilmez.
+
+Otomatik WhatsApp bağlantısı şu anda etkin değildir. İzinli müşteriler için
+kayıt/durum mesajı hazırlanır; düğme WhatsApp sohbetini açar, gönderimi yönetici
+tamamlar. Cloud API adaptörünün teknik gereksinimleri modülün
+`WHATSAPP-BAGLANTISI.txt` dosyasındadır. Gerçek Meta bağlantısı ve gönderimi
+henüz doğrulanmadı; sağlayıcı kabulü teslim olarak gösterilmez.
+
+Fotoğraflar `public_html` dışında `bilisimservis-repair-files` klasörüne
+kaydedilir; yeni tablolarla birlikte bu klasörü yedekleyin. Kurulum,
+fotoğraf sınırları ve geri dönüş bilgileri modülün `KURULUM.txt` dosyasındadır.
+PHP 8.3, SQLite ve MariaDB 11.4 model kontrolleri; oturum/CSRF, fotoğraf ve
+durum HTTP kontrolleri; masaüstü/mobil tarayıcı kontrolleri geçti.
+Sonuçlar `servis-kayit-test-sonuclari.json`, örnek model testi
+`servis-kayit-testleri/` dizinindedir. Canlı hosting'e yükleme yapılmadı.
